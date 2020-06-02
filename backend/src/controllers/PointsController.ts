@@ -12,7 +12,7 @@ class PointsController {
         longitude,
         city,
         uf,
-        items,
+        itens,
       } = request.body;
     
       const trx = await knex.transaction();
@@ -32,7 +32,7 @@ class PointsController {
     
       const point_id = insertedIds[0];
     
-      const pointItens = items.map((item_id: number) => {
+      const pointItens = itens.map((item_id: number) => {
         return {
           item_id,
           point_id,
