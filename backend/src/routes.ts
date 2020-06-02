@@ -17,11 +17,11 @@ routes.post('/points', celebrate({
   [Segments.BODY]: {
     name: Joi.string().required(),
     email: Joi.string().email().required(),
-    whatsapp: Joi.string().required(),
+    whatsapp: Joi.string().min(10).max(11).required(),
     latitude: Joi.number().required(),
     longitude: Joi.number().required(),
     city: Joi.string().required(),
-    uf: Joi.string().required(),
+    uf: Joi.string().required().length(2),
     itens: Joi.required(),
   }
 }), pointsController.create);
