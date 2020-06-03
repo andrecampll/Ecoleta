@@ -10,7 +10,7 @@
 Este projeto foi desenvolvido na primeira edição do evento Next Level Week, da Rocketseat.
 
 # Proposta 🔥
-Este projeto é uma intervenção tecnológica no meio ambiente, o qual tem o objetivo de conectar pessoas a pontos de coleta para
+A iniciativa é uma intervenção tecnológica no meio ambiente, o qual tem o objetivo de conectar pessoas a pontos de coleta para
 reciclagem. Tais pontos também são cadastrados pelos próprios usuários, informando os devidos dados para contato e localização
 do respectivo ponto.
 
