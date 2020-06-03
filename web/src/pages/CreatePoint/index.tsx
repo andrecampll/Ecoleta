@@ -13,7 +13,7 @@ import { Container } from './styles';
 import logo from '../../assets/logo.svg';
 
 interface Item {
-  id: string;
+  id: number;
   title: string;
   image_url: string;
 }
@@ -32,10 +32,26 @@ const SignUp: React.FC = () => {
   const [ufs, setUfs] = useState<string[]>([]);
   const [cities, setCities] = useState<string[]>([]);
 
+  const [initialPosition, setInitialPosition] = useState<[number, number]>([0, 0]);
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    whatsapp: '',
+  });
+
   const [selectedUF, setSelectedUF] = useState('0');
   const [selectedCity, setSelectedCity] = useState('0');
-
+  const [selectedItens, setSelectedItens] = useState<number[]>([]);  
   const [selectedPosition, setSelectedPosition] = useState<[number, number]>([0, 0]);
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(position => {
+      const { latitude, longitude } = position.coords;
+
+      setInitialPosition([latitude, longitude]);
+    });
+  }, []);
 
   useEffect(() => {
     api.get('itens').then(response => setItens(response.data));
@@ -76,6 +92,27 @@ const SignUp: React.FC = () => {
     ]);
   }, []);
 
+  const handleInputChange = useCallback((e : ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    
+    setFormData({
+      ...formData,
+      [name]: value
+    })
+  }, [formData]);
+
+  const handleSelectItem = useCallback((id: number) => {
+    const alreadySelected = selectedItens.findIndex(item => item === id);
+
+    if (alreadySelected >= 0) {
+      const filteredItens = selectedItens.filter(item => item !== id);
+
+      setSelectedItens(filteredItens);
+    } else {
+      setSelectedItens([...selectedItens, id]);
+    }
+  }, [selectedItens]);
+
   return (
     <Container>
       <header>
@@ -97,18 +134,33 @@ const SignUp: React.FC = () => {
 
           <div className="field">
             <label htmlFor="name">Nome da entidade</label>
-            <input type="text" name="name" id="name"/>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              onChange={handleInputChange}
+            />
           </div>
 
           <div className="field-group">
             <div className="field">
               <label htmlFor="email">E-mail</label>
-              <input type="email" name="email" id="email"/>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                onChange={handleInputChange}
+              />
             </div>
 
             <div className="field">
               <label htmlFor="whatsapp">Whatsapp</label>
-              <input type="text" name="whatsapp" id="whatsapp"/>
+              <input
+                type="text"
+                name="whatsapp"
+                id="whatsapp"
+                onChange={handleInputChange}
+              />
             </div>
           </div>
         </fieldset>
@@ -119,7 +171,7 @@ const SignUp: React.FC = () => {
             <span>Selecione o endereço no mapa</span>
           </legend>
 
-          <Map center={[-1.4515086,-48.4487568]} zoom={15} onClick={handleMapClick} >
+          <Map center={initialPosition} zoom={15} onClick={handleMapClick} >
             <TileLayer
               attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -169,7 +221,11 @@ const SignUp: React.FC = () => {
 
           <ul className="items-grid">
             {itens.map((item: Item) => (
-              <li key={item.id} >
+              <li
+                key={item.id}
+                onClick={() => handleSelectItem(item.id)}
+                className={selectedItens.includes(item.id) ? 'selected' : ''}
+              >
                 <img src={item.image_url} alt={item.title} />
                 <span>{item.title}</span>
               </li>
