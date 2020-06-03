@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="logo.svg"/>
+  <img src="/logo.svg"/>
 </p>
 
 <p align="center">
-  <img src="web/src/assets/logo.svg"/>
+  <img src="/web/src/assets/logo.svg"/>
 </p>
 
 # Ecoleta ♻️
