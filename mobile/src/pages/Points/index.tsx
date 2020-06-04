@@ -108,7 +108,7 @@ const Points: React.FC = () => {
     <>
       <View style={styles.container} >
         <TouchableOpacity onPress={handleNavigateBack}>
-          <Icon name="arrow-left" color="#34CB79" size={24} />
+          <Icon name="arrow-left" color="#ec135a" size={24} />
         </TouchableOpacity>
 
         <Text style={styles.title}>Bem-vindo(a)</Text>
@@ -186,10 +186,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: 'Ubuntu_700Bold',
     marginTop: 24,
+    color: '#ddd',
   },
 
   description: {
-    color: '#6C6C80',
+    color: '#ccc',
     fontSize: 16,
     marginTop: 4,
     fontFamily: 'Roboto_400Regular',
@@ -244,9 +245,9 @@ const styles = StyleSheet.create({
   },
 
   item: {
-    backgroundColor: '#fff',
+    backgroundColor: '#333',
     borderWidth: 2,
-    borderColor: '#eee',
+    borderColor: '#333',
     height: 120,
     width: 120,
     borderRadius: 8,
@@ -261,7 +262,7 @@ const styles = StyleSheet.create({
   },
 
   selectedItem: {
-    borderColor: '#34CB79',
+    borderColor: '#ec135a',
     borderWidth: 2,
   },
 
@@ -269,5 +270,6 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto_400Regular',
     textAlign: 'center',
     fontSize: 13,
+    color: '#ddd',
   },
 });

@@ -30,7 +30,7 @@ const Home: React.FC = () => {
           <Image source={require('../../assets/logodarkalternative.png')} />
           <View>
             <Text style={styles.title}>Seu marketplace de coleta de resíduos</Text>
-            <Text style={styles.description}>Ajudamos pessoas a encontrarem pontos de colea de forma eficiente</Text>
+            <Text style={styles.description}>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente</Text>
           </View>
         </View>
 
