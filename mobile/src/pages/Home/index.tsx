@@ -21,13 +21,13 @@ const Home: React.FC = () => {
   return (
     <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <ImageBackground
-        source={require('../../assets/home-background.png')}
+        source={require('../../assets/home-backgrounddark.png')}
         style={styles.container}
         resizeMode="cover"
         imageStyle={{ width: 274, height: 368 }}
       >
         <View style={styles.main}>
-          <Image source={require('../../assets/logo.png')} />
+          <Image source={require('../../assets/logodarkalternative.png')} />
           <View>
             <Text style={styles.title}>Seu marketplace de coleta de resíduos</Text>
             <Text style={styles.description}>Ajudamos pessoas a encontrarem pontos de colea de forma eficiente</Text>
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    color: '#322153',
+    color: '#eee',
     fontSize: 32,
     fontFamily: 'Ubuntu_700Bold',
     maxWidth: 260,
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   },
 
   description: {
-    color: '#6C6C80',
+    color: '#ddd',
     fontSize: 16,
     marginTop: 16,
     fontFamily: 'Roboto_400Regular',
@@ -104,15 +104,16 @@ const styles = StyleSheet.create({
 
   input: {
     height: 60,
-    backgroundColor: '#FFF',
+    backgroundColor: '#333',
     borderRadius: 10,
     marginBottom: 8,
     paddingHorizontal: 24,
     fontSize: 16,
+    color: '#aaa',
   },
 
   button: {
-    backgroundColor: '#34CB79',
+    backgroundColor: '#ec135a',
     height: 60,
     flexDirection: 'row',
     borderRadius: 10,
