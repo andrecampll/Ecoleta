@@ -6,6 +6,10 @@ export const Container = styled.div`
   height: 100vh;
 
   background: url(${background}) no-repeat 600px bottom;
+  @media (max-height: 670px) {
+    background-position-y: 100px;
+    background-position-x: 500px;
+  }
 `;
 
 export const Content = styled.div`

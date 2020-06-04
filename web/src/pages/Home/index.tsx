@@ -2,10 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
 
-// import Header from '../../components/Header';
-// import Button from '../../components/Button';
-
-import logo from '../../assets/logo.svg';
+import Header from '../../components/Header';
 
 import { Container, Content, } from './styles';
 
@@ -13,9 +10,8 @@ const SignIn: React.FC = () => {
   return (
     <Container>
       <Content>
-        <header>
-          <img src={logo} alt="Ecoleta"/>
-        </header>
+
+        <Header />
 
         <main>
           <h1>Seu marketplace de coleta de resíduos.</h1>
