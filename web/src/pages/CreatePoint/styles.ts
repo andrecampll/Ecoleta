@@ -14,7 +14,7 @@ export const Container = styled.div`
     align-items: center;
 
     a {
-      color: #322153;
+      color: #eee;
       font-family: 'Ubunto', sans-serif;
       font-weight: bold;
       text-decoration: none;
@@ -24,7 +24,7 @@ export const Container = styled.div`
 
       svg {
         margin-right: 16px;
-        color: #2FB86E;
+        color: #ec135a;
       }
     }
   }
@@ -33,7 +33,7 @@ export const Container = styled.div`
     margin: 80px auto;
     padding: 64px;
     max-width: 730px;
-    background: #FFF;
+    background: #333;
     border-radius: 8px;
 
     display: flex;
@@ -41,7 +41,7 @@ export const Container = styled.div`
 
     h1 {
       font-size: 36px;
-      color: #322153;
+      color: #eee;
       font-family: 'Ubuntu', sans-serif;
       font-weight: bold;
     }
@@ -61,7 +61,7 @@ export const Container = styled.div`
 
       h2 {
         font-size: 24px;
-        color: #322153;
+        color: #eee;
         font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
       }
@@ -69,7 +69,7 @@ export const Container = styled.div`
       span {
         font-size: 14px;
         font-weight: normal;
-        color: #322153;
+        color: #eee;
         font-family: 'Ubuntu', sans-serif;
       }
     }
@@ -86,12 +86,12 @@ export const Container = styled.div`
     .field input[type=email],
     .field input[type=text] {
       flex: 1;
-      background: #F0F0F5;
+      background: #222;
       border-radius: 8px;
       border: 0;
       padding: 16px 24px;
       font-size: 16px;
-      color: #6C6C80;
+      color: #ddd;
     }
 
     .field select {
@@ -99,12 +99,12 @@ export const Container = styled.div`
       -moz-appearance: none;
       appearance: none;
       flex: 1;
-      background: #F0F0F5;
+      background: #222;
       border-radius: 8px;
       border: 0;
       padding: 16px 24px;
       font-size: 16px;
-      color: #6C6C80;
+      color: #ddd;
     }
 
     .field input::placeholder {
@@ -114,7 +114,7 @@ export const Container = styled.div`
     .field label {
       font-size: 14px;
       margin-bottom: 8px;
-      color: #322153;
+      color: #eee;
       font-family: 'Ubuntu', sans-serif;
     }
 
@@ -157,7 +157,7 @@ export const Container = styled.div`
     button {
       width: 260px;
       height: 56px;
-      background: #2Fa06E;
+      background: #ec135a;
       border-radius: 8px;
       color: #FFF;
       font-weight: bold;
@@ -170,7 +170,7 @@ export const Container = styled.div`
     }
 
     button:hover {
-      background: #2FB86E;
+      background: #ec025a;
     }
 
     .items-grid {

@@ -12,7 +12,7 @@ import Dropzone from '../../components/Dropzone';
 
 import { Container } from './styles';
 
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logodarkalternative.png';
 
 interface Item {
   id: number;
@@ -154,7 +154,7 @@ const SignUp: React.FC = () => {
   return (
     <Container>
       <header>
-        <img src={logo} alt="Ecoleta"/>''
+        <img src={logo} alt="Ecoleta"/>
       
         <Link to="/">
           <FiArrowLeft />
