@@ -2,7 +2,7 @@ import React from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logodarkalternative.png';
 
 import { Container } from './styles';
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import background from '../../assets/home-background.svg'
+import background from '../../assets/home-backgrounddarkalternative.png'
 
 export const Container = styled.div`
   height: 100vh;
@@ -50,7 +50,7 @@ export const Content = styled.div`
 
     h1 {
       font-size: 54px;
-      color: #322153;
+      color: #eee;
       font-weight: bold;
       font-family: 'Ubuntu', sans-serif;
 
@@ -64,7 +64,7 @@ export const Content = styled.div`
       margin-top: 24px;
       line-height: 38px;
       font-family: 'Roboto', sans-serif;
-      color: #555;
+      color: #aaa;
 
       @media(max-width: 900px) {
         font-size: 24px;
@@ -75,7 +75,7 @@ export const Content = styled.div`
       width: 100%;
       max-width: 360px;
       height: 72px;
-      background: #2FB86E;
+      background: #ec135a;
       border-radius: 8px;
       text-decoration: none;
 
@@ -86,7 +86,7 @@ export const Content = styled.div`
       margin-top: 40px;
 
       &:hover {
-        background: #2FB86E;
+        background: #ec135a;
       }
 
       span {
