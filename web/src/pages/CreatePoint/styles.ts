@@ -181,8 +181,8 @@ export const Container = styled.div`
     }
 
     .items-grid li {
-      background: #f5f5f5;
-      border: 2px solid #f5f5f5;
+      background: #222;
+      border: 2px solid #222;
       height: 180px;
       border-radius: 8px;
       padding: 32px 24px 16px;
@@ -203,13 +203,13 @@ export const Container = styled.div`
 
       display: flex;
       align-items: center;
-      color: #322153;
+      color: #eee;
       font-family: 'Ubuntu', sans-serif;
     }
 
     .items-grid li.selected {
-      background: #E1FAEC;
-      border: 2px solid #34CB79;
+      background: #ff5f9f;
+      border: 2px solid #ec025a;
     }
   }
 `;
