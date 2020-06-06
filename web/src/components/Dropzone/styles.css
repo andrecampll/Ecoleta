@@ -27,6 +27,7 @@
   justify-content: center;
   align-items: center;
   color: #eee;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .dropzone p svg {

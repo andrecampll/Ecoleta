@@ -105,6 +105,8 @@ const Points: React.FC = () => {
     navigation.navigate('Detail', { pointId: id });
   }, []);
 
+  console.log(itens);
+
   return (
     <>
       <View style={styles.container} >
@@ -163,7 +165,7 @@ const Points: React.FC = () => {
               onPress={() => handleSelectItem(item.id)}
               activeOpacity={0.6}
             >
-              <SvgUri width={42} height={42} uri={item.image_url} />
+              <Image source={{ uri: "http://192.168.0.106:3333/uploads/organicosdark.png" }} />
               <Text style={styles.itemTitle}>{item.title}</Text>
             </TouchableOpacity>
           )) }

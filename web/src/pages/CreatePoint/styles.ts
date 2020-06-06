@@ -208,7 +208,6 @@ export const Container = styled.div`
     }
 
     .items-grid li.selected {
-      background: #ff5f9f;
       border: 2px solid #ec025a;
     }
   }
